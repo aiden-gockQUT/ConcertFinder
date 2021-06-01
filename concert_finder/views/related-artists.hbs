@@ -1,0 +1,29 @@
+{{!-- HTML View for the Related Artists Page --}}
+
+<body class = "page">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<div class = "page">
+    <h1>Related Artists</h1>
+        <h2>Click on an artist's name to see where they are performing!</h2>
+
+          {{#each artist_array}}
+          <div class = "artist-image">
+              <a class = "button" href="/related-artists/{{name}}/{{spotify_token}}">{{name}}</a><br></br>
+              <img class = "image" src={{img}} alt={{name}} width="140" height="140">
+          </div>
+          {{/each}}
+
+</div>
+
+<div class = "menu-buttons">
+  <button class = "button" onclick="goBack()">Go Back</button>
+  <a class = "button" href="/">Home Page</a>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+</script>
+</body>

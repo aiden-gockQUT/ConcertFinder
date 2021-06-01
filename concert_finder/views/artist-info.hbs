@@ -1,0 +1,40 @@
+{{!-- HTML View for the Artist Information Page --}}
+
+<body class = "page">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<div class = "page">
+    <h1>Artist Information</h1>
+        <h2>These are {{artist_name2}}'s Top Tracks:</h2><br></br>
+        {{#each track_array}}
+        <div class = "tracks">
+            <p>{{track_number}}. {{track_name}}</p>
+            {{#if track_preview}}
+            <audio controls>
+                <source src={{track_preview}} type="audio/ogg">
+            </audio>
+            {{/if}}
+        </div>
+        {{/each}}
+
+</div>
+
+<div class = "menu-buttons">
+    <button class = "button" onclick="goBack()">Go Back</button>
+    <a class = "button" href="/">Home Page</a>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+// Function to auto-pause a preview if another one is played
+$(function(){
+    $("audio").on("play", function() {
+        $("audio").not(this).each(function(index, audio) {
+            audio.pause();
+        });
+    });
+});
+</script>
+</body>

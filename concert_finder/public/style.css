@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ec9292
+  }
+
+  h1  {
+    font-size: 50px;
+    color: #181616;
+  }
+
+  h2  {
+    font-size: 20;
+    color: #181616;
+  }
+  h3  {
+    font-size: 16;
+    color: #353131;
+    line-height: 8px;
+  }
+
+  p  {
+    font-size: 16;
+    margin: 2;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+/* Styling for pages that aren't the main page */
+  body.page {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+  }
+  div.page{
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    background-color: #92e7d9;
+    position: center;
+    border-color: #00000083;
+    border-style: inset;
+    border-width: 3px;
+    overflow: hidden;
+  }
+
+  div.artist-image {
+    border-style: groove;
+    text-overflow: ellipsis;
+    width: 146;
+    height: 182;
+    padding: 0px;
+    display: inline-block;
+    white-space:nowrap;
+    overflow: hidden;
+    margin: auto;
+    background-color: #ffffff;
+    border-color: #000000b9;
+    position: center;
+  }
+
+  div.tracks {
+    border-color: #000000b9;
+    border-style: groove;
+    border-width: 2px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    padding: 16px;
+  }
+
+  img.image {
+    border-style: groove;
+    border-color: #000000b9;
+  }
+
+  a.button, button.button{
+    background-color: #92e7d9;
+    border: groove;
+    color: #181616;
+    padding: 2px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-color: #00000085;
+  }
+  a.performers{
+    background-color: #92e7d9;
+    color: #181616;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+  }
+
+  
+  div.event-info {
+    outline-offset: 25px;
+    border-color: #000000b9;
+    border-style: inset;
+    border-left-width: 6px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding: 16px;
+  }
+
+/* homepage styling */
+  div.homepage {
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    top:-200;
+    bottom: 0;
+    left: 0;
+    right: 0;
+      
+    margin: auto;
+    text-align: center;
+    background-color: #92e7d9;
+    border-color: #00000083;
+    border-style: inset;
+    border-width: 3px;
+
+    overflow: hidden;
+  }
+  
+  form.searchBar input[type=text]{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #ffffff;
+    border-color: #000000be
+  }
+  
+
+  
+  form.searchBar button {
+    float: left;
+    width: 20%;
+    padding: 11.5px;
+    background: #ec9292;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.searchBar button:hover {
+    background: #da4c4c;
+  }
+  
+  form.searchBar::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

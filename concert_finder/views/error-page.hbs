@@ -1,0 +1,29 @@
+{{!-- HTML View for the Error Page --}}
+
+<body class = "page">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<div class = "page">
+    <h1>Concert Finder!</h1>
+
+    {{#if message}}
+        <h2> {{message}}</h2>
+    {{else}}
+        <h2>{{error_message}}</h2>           
+    {{/if}}
+
+</div>
+
+<div class = "menu-buttons">
+  <button class = "button" onclick="goBack()">Go Back</button>
+  <a class = "button" href="/">Home Page</a>
+  {{#if artist_name}}
+    <a class="button" href="/artist/{{artist_name}}/artist-information/{{spot_token}}" >Artist Information</a>
+  {{/if}}
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</body>

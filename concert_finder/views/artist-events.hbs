@@ -1,0 +1,43 @@
+{{!-- HTML View for the Artist Events Page --}}
+
+<body class = "page">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+<div class = "page">
+    <h1>Artist Events</h1>
+
+      <h2>{{artist_name}} is performing at the following events:</h2>
+        <h3>Click on a Performer to see their top tracks!</h3>
+
+        {{#each event_info}}
+          <div class = "event-info">
+          <p>Event Title: {{title}}</p>
+          <p>Event Location: {{location}}</p>
+          <p>Event Date: {{date}}</p>
+          <p>Tickets left: {{tickets}} selling from ${{price}}</p>
+          <p>Performers: 
+            {{#each test}}
+             <a class = "performers" href="/artist/{{performers}}/artist-information/{{token}}">| {{performers}} |</a>
+            {{/each}}
+          </p>
+          
+          <a href={{url}} target="_blank">View Information on Website</a>
+          </div>
+        {{/each}}
+
+</div>
+
+<div class = "menu-buttons">
+  <button class = "button" onclick="goBack()">Go Back</button>
+  <a class = "button" href="/">Home Page</a>
+  {{#if artist_name}}
+    <a class="button" href="/artist/{{artist_name}}/artist-information/{{spot_token}}" >Artist Information</a>
+  {{/if}}
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+
+</script>
+</body>
